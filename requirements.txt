@@ -1,0 +1,2 @@
+Flask==3.0.3            # Flask framework for the API
+Flask-CORS==3.0.10      # For handling cross-origin requests between backend and frontend
