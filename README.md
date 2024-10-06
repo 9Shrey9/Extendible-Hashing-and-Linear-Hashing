@@ -33,7 +33,7 @@ Follow these instructions to set up the backend and frontend components of the p
 ### 1. Clone the Repository (if applicable)
 
 ```bash
-git clone https://github.com/9Shrey9/Extendible-Hashing-and-Linear-Hashing.git
+git clone -b master https://github.com/9Shrey9/Extendible-Hashing-and-Linear-Hashing.git
 cd Extendible-Hashing-and-Linear-Hashing
 ```
 
