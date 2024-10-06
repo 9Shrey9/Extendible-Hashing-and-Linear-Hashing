@@ -1,0 +1,78 @@
+# =========================
+# Python
+# =========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.env/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDE settings
+.idea/
+.vscode/
+
+# =========================
+# General
+# =========================
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+*.swn
+
+# =========================
+# Frontend Build Artifacts
+# =========================
+
+# Ignore build artifacts for frontend if any
+frontend/build/
+
+# Ignore environment variable files
+.env

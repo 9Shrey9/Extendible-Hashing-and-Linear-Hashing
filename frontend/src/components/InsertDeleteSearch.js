@@ -70,17 +70,17 @@
 //             {/* Insert Section */}
 //             <div>
 //                 <h3>Insert Key</h3>
-//                 <input 
-//                     type="number" 
-//                     placeholder="Enter key" 
-//                     value={key} 
-//                     onChange={(e) => setKey(e.target.value)} 
+//                 <input
+//                     type="number"
+//                     placeholder="Enter key"
+//                     value={key}
+//                     onChange={(e) => setKey(e.target.value)}
 //                 />
-//                 <input 
-//                     type="text" 
-//                     placeholder="Enter value" 
-//                     value={value} 
-//                     onChange={(e) => setValue(e.target.value)} 
+//                 <input
+//                     type="text"
+//                     placeholder="Enter value"
+//                     value={value}
+//                     onChange={(e) => setValue(e.target.value)}
 //                 />
 //                 <button onClick={handleInsert}>Insert</button>
 //             </div>
@@ -88,11 +88,11 @@
 //             {/* Delete Section */}
 //             <div>
 //                 <h3>Delete Key</h3>
-//                 <input 
-//                     type="number" 
-//                     placeholder="Enter key to delete" 
-//                     value={key} 
-//                     onChange={(e) => setKey(e.target.value)} 
+//                 <input
+//                     type="number"
+//                     placeholder="Enter key to delete"
+//                     value={key}
+//                     onChange={(e) => setKey(e.target.value)}
 //                 />
 //                 <button onClick={handleDelete}>Delete</button>
 //             </div>
@@ -100,11 +100,11 @@
 //             {/* Search Section */}
 //             <div>
 //                 <h3>Search Key</h3>
-//                 <input 
-//                     type="number" 
-//                     placeholder="Enter key to search" 
-//                     value={searchKey} 
-//                     onChange={(e) => setSearchKey(e.target.value)} 
+//                 <input
+//                     type="number"
+//                     placeholder="Enter key to search"
+//                     value={searchKey}
+//                     onChange={(e) => setSearchKey(e.target.value)}
 //                 />
 //                 <button onClick={handleSearch}>Search</button>
 //                 {searchResult && <div>Result: {JSON.stringify(searchResult)}</div>}

@@ -1,5 +1,6 @@
 import logging
 
+
 class ExtendibleHashing:
     def __init__(self):
         self.current_level = 0
@@ -54,20 +55,22 @@ class ExtendibleHashing:
 
     def split_bucket(self, bucket_index):
         print(f"Splitting bucket {bucket_index}.")
-        
+
         # Retrieve the local depth for the current bucket
         local_depth = self.bucket_depths[bucket_index]
-        
+
         # Check if we need to increase the global depth
         if local_depth == self.current_level:
             self.current_level += 1
             print(f"Global depth increased to {self.current_level}.")
-        
+
         # Create new buckets for the new level
         for i in range(2 ** (self.current_level + 1)):
             if i not in self.buckets:
                 self.buckets[i] = []  # Initialize new buckets
-                self.bucket_depths[i] = local_depth + 1  # Set local depth for the new bucket
+                self.bucket_depths[i] = (
+                    local_depth + 1
+                )  # Set local depth for the new bucket
 
         # Rehash all items in the old bucket
         old_items = self.buckets[bucket_index].copy()
@@ -79,8 +82,9 @@ class ExtendibleHashing:
 
         # Increment local depth of the split bucket
         self.bucket_depths[bucket_index] += 1
-        print(f"Local depth of bucket {bucket_index} updated to {self.bucket_depths[bucket_index]}.")
-
+        print(
+            f"Local depth of bucket {bucket_index} updated to {self.bucket_depths[bucket_index]}."
+        )
 
     def delete(self, key):
         bucket_index = self.hash(key)
@@ -101,7 +105,9 @@ class ExtendibleHashing:
         bucket_index = self.hash(key)
         bucket = self.buckets[bucket_index]
 
-        print(f"Searching for key {key} in bucket {bucket_index}. Current contents: {bucket}")
+        print(
+            f"Searching for key {key} in bucket {bucket_index}. Current contents: {bucket}"
+        )
 
         for k, v in bucket:
             if k == key:
@@ -120,23 +126,28 @@ class ExtendibleHashing:
 
     def statistics(self):
         return {
-            'current_level': self.current_level,
-            'bucket_count': len(self.buckets),
-            'bucket_sizes': {index: len(bucket) for index, bucket in self.buckets.items()}
+            "current_level": self.current_level,
+            "bucket_count": len(self.buckets),
+            "bucket_sizes": {
+                index: len(bucket) for index, bucket in self.buckets.items()
+            },
         }
-    
+
     def get_state(self):
         bucket_sizes = {index: len(bucket) for index, bucket in self.buckets.items()}
         bucket_contents = {index: bucket for index, bucket in self.buckets.items()}
-        local_depths = {index: self.bucket_depths.get(index, 0) for index in self.buckets}
+        local_depths = {
+            index: self.bucket_depths.get(index, 0) for index in self.buckets
+        }
 
         return {
-            'current_level': self.current_level,
-            'bucket_count': len(self.buckets),
-            'bucket_sizes': bucket_sizes,
-            'bucket_contents': bucket_contents,
-            'local_depths': local_depths,  # Include local depths
+            "current_level": self.current_level,
+            "bucket_count": len(self.buckets),
+            "bucket_sizes": bucket_sizes,
+            "bucket_contents": bucket_contents,
+            "local_depths": local_depths,  # Include local depths
         }
+
 
 # Initialize the ExtendibleHashing instance
 extendible_hasher = ExtendibleHashing()

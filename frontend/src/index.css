@@ -2,116 +2,116 @@
 
 /* Overall App Styles */
 .App {
-    display: flex;
-    justify-content: center; /* Center the main content horizontally */
-    align-items: flex-start; /* Align items at the top */
-    margin: 20px;
+  display: flex;
+  justify-content: center; /* Center the main content horizontally */
+  align-items: flex-start; /* Align items at the top */
+  margin: 20px;
 }
 
 /* Container for main content */
 .main-content {
-    max-width: 600px;
-    margin-right: 20px; /* Add margin to separate from the side panel */
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-right: 20px; /* Add margin to separate from the side panel */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Notification Panel */
 .notification-panel {
-    width: 300px;
-    max-height: 600px; /* Limit height */
-    overflow-y: auto; /* Enable scrolling */
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-height: 600px; /* Limit height */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Title Styles */
 h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 /* Form Styles */
 form {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Input Styles */
 input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
 }
 
 /* Button Styles */
 button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Notification Styles */
 .notification {
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Success Notification */
 .notification.success {
-    background-color: #4caf50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 
 /* Error Notification */
 .notification.error {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 
 /* Search Result Styles */
 .search-result {
-    margin: 10px 0;
-    font-weight: bold;
-    background-color: #e3f2fd;
-    padding: 10px;
-    border-left: 5px solid #2196f3;
+  margin: 10px 0;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  padding: 10px;
+  border-left: 5px solid #2196f3;
 }
 
 /* Dropdown Styles */
 select {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
 }
 
 /* Close Button in Notifications */
 .notification button {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
 }

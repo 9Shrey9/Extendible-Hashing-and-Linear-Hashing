@@ -1,5 +1,6 @@
 import logging
 
+
 class LinearHashing:
     def __init__(self):
         self.size = 2  # Number of buckets
@@ -41,7 +42,7 @@ class LinearHashing:
     #     # Print the current bucket contents to the terminal
     #     self.display()
     #     return self.statistics()
-    
+
     def insert(self, key, value):
         """Insert a key-value pair into the hash table."""
         # Check the load factor and split before inserting the new element.
@@ -58,7 +59,9 @@ class LinearHashing:
                 self.count += 1
                 logging.info(f"Inserted ({key}, {value}) into bucket {index}.")
             else:
-                logging.warning(f"Bucket {index} is full. Cannot insert ({key}, {value}).")
+                logging.warning(
+                    f"Bucket {index} is full. Cannot insert ({key}, {value})."
+                )
                 # If the bucket is full, it will try to split the bucket first
                 self.split_bucket()  # Try to split the bucket
                 self.insert(key, value)  # Retry the insertion
@@ -68,7 +71,6 @@ class LinearHashing:
         # Print the current bucket contents to the terminal
         self.display()
         return self.statistics()
-
 
     # def split_bucket(self):
     #     """Split the next bucket in the table to manage overflow."""
@@ -92,7 +94,7 @@ class LinearHashing:
 
     #     # Move to the next bucket to split
     #     self.next_bucket_to_split += 1
-        
+
     #     # Update next_bucket_to_split to wrap correctly
     #     if self.next_bucket_to_split >= self.size:  # Adjust to correct bounds
     #         self.next_bucket_to_split = 0
@@ -128,7 +130,6 @@ class LinearHashing:
         # Print the state after the split
         self.display()
 
-
     def delete(self, key):
         """Remove a key from the hash table."""
         index = self.hash(key)
@@ -152,7 +153,9 @@ class LinearHashing:
         index = self.hash(key)
         bucket = self.buckets[index]
 
-        logging.info(f"Searching for key {key} in bucket {index}. Current contents: {bucket}")
+        logging.info(
+            f"Searching for key {key} in bucket {index}. Current contents: {bucket}"
+        )
         for item in bucket:
             if item[0] == key:
                 logging.info(f"Found key {key} in bucket {index} with value {item[1]}.")
@@ -173,10 +176,12 @@ class LinearHashing:
     def statistics(self):
         """Return statistics about the hash table."""
         return {
-            'current_size': self.size,
-            'entry_count': self.count,
-            'load_factor': self.load_factor(),
-            'bucket_sizes': {index: len(bucket) for index, bucket in enumerate(self.buckets)}
+            "current_size": self.size,
+            "entry_count": self.count,
+            "load_factor": self.load_factor(),
+            "bucket_sizes": {
+                index: len(bucket) for index, bucket in enumerate(self.buckets)
+            },
         }
 
     def get_state(self):
@@ -186,12 +191,13 @@ class LinearHashing:
         bucket_contents = {i: self.buckets[i] for i in range(self.size)}
 
         return {
-            'current_size': self.size,
-            'entry_count': self.count,
-            'load_factor': load_factor,
-            'bucket_sizes': bucket_sizes,
-            'bucket_contents': bucket_contents,
+            "current_size": self.size,
+            "entry_count": self.count,
+            "load_factor": load_factor,
+            "bucket_sizes": bucket_sizes,
+            "bucket_contents": bucket_contents,
         }
+
 
 # Initialize the LinearHashing instance
 linear_hasher = LinearHashing()
